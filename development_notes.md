@@ -185,7 +185,7 @@ VRSTVA 3: Filename fallback (záchranná síť)
 
 ### 6.2 Úspěšný výsledek
 
-- Funkční indexační skript v8 (Claude)
+- Funkční indexační skript 
 - 3vrstvá klasifikace obnovena
 - JSON fallback implementován
 - Plná taxonomie 18 typů

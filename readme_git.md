@@ -1,9 +1,3 @@
-rag-indexer/
-├── universal_indexer_documents_v2_git.py   (hlavní skript)
-├── README_git.md                            (popis projektu)
-└── DEVELOPMENT_NOTES.md                 (post mortem vývojové poznámky)
-
-
 # Sémantický Indexer pro RAG (Univerzální Dry-Run Verze)
 # Případová studie: AI-Assisted Engineering & Datová příprava
 

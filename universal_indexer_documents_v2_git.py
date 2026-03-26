@@ -42,7 +42,6 @@ TAXONOMY_RULES = {
     "cloud_infrastructure": r"(gcp_stack|cloud_shell|dockerfile|requirements\.txt|ingest_watchdog)",
     "dev_post_mortem": r"(pitevni_kniha|error_gemini|debug_postmortem)",
     "dev_guidelines": r"(standardy_dev_ai|profil_operatora|report_architektura|dred_core_profil)",
-    "prace_a_zivotopis": r"(ondrej_sousek_cv|jobs_rag|pracecz|internet-handel)",
     "eshop_produkty": r"(gme_produkty|hornbach_produkty|jacer_produkty|neven_produkty|vrabec_produkty)",
     "diagnostika_a_logy": r"(diagnoza_|detaillogs|bms_log|bms_checkpoint|bms_cleaning|log_cleaned)",
     "dokumentace_master": r"(master\.md|master_inventory\.md)",

@@ -1,9 +1,9 @@
 # Sémantický Indexer pro RAG
 ## Případová studie: AI-Assisted Engineering & Datová příprava
 
-Tento repozitář obsahuje nástroj navržený jako robustní pre-processingová (dry-run) vrstva pro migraci nestrukturovaných dat z lokálních disků do vektorových databází a RAG (Retrieval-Augmented Generation) systémů.
+Tento repozitář obsahuje nástroj navržený jako lehká pre-processingová (dry-run) vrstva pro migraci nestrukturovaných dat z lokálních disků do vektorových databází a RAG (Retrieval-Augmented Generation) systémů.
 
-Cílem nástroje není manipulace s daty, ale jejich stoprocentní ZMAPOVÁNÍ, SÉMANTICKÁ KLASIFIKACE, a NORMALIZACE (řešení encoding hell). Výstupem je strukturovaný manifest `02_rag_metadata.json`, který může přímo konzumovat RAG pipeline (např. LangChain).
+Cílem nástroje není manipulace s daty, ale jejich stoprocentní ZMAPOVÁNÍ, SÉMANTICKÁ KLASIFIKACE, a NORMALIZACE (řešení encoding hell). Výstupem je strukturovaný manifest `rag_metadata.json`, který může přímo konzumovat RAG pipeline (např. LangChain).
 
 ## 1. MOTIVACE A ARCHITEKTONICKÝ ZÁMĚR
 Tradiční skripty pro datový ingest do RAG systémů na lokálních Windows prostředích často naráží na následující blokátory, které tento skript řeší ještě PŘED předáním dat drahým LLM embedding modelům:
@@ -35,12 +35,12 @@ Vývoj probíhal formou inkrementálních iterací (testováno na vzorku ~200 so
 
 * **Verze 1 (Baseline):** Oindexováno 86 souborů. Zjištěno značné procento neklasifikovaných souborů.
 * **Verze 2 (Rozšíření taxonomie):** Rozšíření Regex pravidel (přidána LiDAR data, HTML reporty, atd.). Index stoupl na 94, ovšem skript začal číst i systémový odpad.
-* **Verze 3 (Optimalizace a Filtrace):** Zavedení filtrů pro `desktop.ini` a SQLite cache. Zavedení auto-konverze kódování cp1250 na utf-8. Výsledkem je 92 naprosto čistých dokumentů připravených pro LLM.
+* **Verze 7 (Optimalizace a Filtrace):** Zavedení filtrů pro `desktop.ini` a SQLite cache. Zavedení auto-konverze kódování cp1250 na utf-8. Výsledkem je 92 naprosto čistých dokumentů připravených pro LLM.
 
 ## 4. POUŽITÍ (CLI)
 **Spuštění skriptu:**
 ```bash
-python universal_indexer_documents_v2.py "C:\Users\PC\Documents"
+python universal_indexer_v7.py "C:\vaše_složka"
 ```
 
 **Příklad výstupu v `02_rag_metadata.json`:**

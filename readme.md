@@ -23,7 +23,7 @@ Skript striktně dělí soubory:
 ## 2. AI-ASSISTED VÝVOJ: POST-MORTEM & LEKCE Z GEMINI
 Tento skript je výsledkem přímé aplikace zkušeností z předchozího neúspěšného vývoje s LLM modelem Google Gemini. 
 
-**Proč předchozí iterace (s Gemini) selhaly:**
+**[Proč předchozí iterace (s Gemini) selhaly](https://github.com/outpost2026/RAG-indexer/blob/main/development_notes.md)**
 - **Ztráta kontextu ("Attention Sink")**: Po 5. iteraci model začal ignorovat systémová pravidla (boundaries).
 - **Ztráta determinismu**: Model aplikoval "Mode Collapse" – odstraňoval nutné bezpečnostní sítě a začal kód svévolně rozšiřovat o nevyžádané a chybné funkce.
   
